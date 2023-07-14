@@ -47,6 +47,14 @@ def kill_bots(source: CommandSource):
     for i in range(1, 11):
         source.get_server().execute(f'/player {prefix}{i} kill')
 
+def show_help_message(server: ServerInterface, info: Info):
+    server.reply(info, '\n----------欢迎使用FastBotSpawn插件----------\n')
+    server.reply(info, '§6!!b set bot_§r 设置前缀，§6bot_§r可随意替换')
+    server.reply(info, '§6!!b clear§r 清除设置的前缀')
+    server.reply(info, '§6!!b spawn§r 一次性召唤10个假人')
+    server.reply(info, '§6!!b drop§r 召唤出的假人丢出全部物品')
+    server.reply(info, '§6!!b kill§r 一次性下线10个假人')
+
 def on_user_info(server: ServerInterface, info: Info):
     global prefix
     if info.is_player:
@@ -63,12 +71,10 @@ def on_user_info(server: ServerInterface, info: Info):
             spawn_bots(info)
         elif info.content == '!!b kill':
             kill_bots(info)
+        elif info.content == '!!b':
+            show_help_message(server, info)
 
 def on_load(server: ServerInterface, old_module):
     load_prefix(server)
-    server.register_help_message('!!b set [prefix]', 'Set the prefix for bots')
-    server.register_help_message('!!b clear', 'Clear the prefix for bots')
-    server.register_help_message('!!b drop', 'Drop items for players')
-    server.register_help_message('!!b spawn', 'Spawn bots for players')
-    server.register_help_message('!!b kill', 'Kill bots for players')
+    server.register_help_message('!!b', '一键批量召唤假人')
     server.register_event_listener('minecraft.console.info', on_user_info)
