@@ -25,6 +25,12 @@ def load_prefix(server: ServerInterface):
             data = json.load(f)
             prefix = data.get('prefix', '')
 
+def clear_prefix(server: ServerInterface):
+    global prefix
+    prefix = ''
+    save_prefix(server)
+    server.logger.info('Prefix cleared')
+
 @new_thread(PLUGIN_METADATA['name'])
 def drop_items(source: CommandSource):
     for i in range(1, 11):
@@ -48,6 +54,9 @@ def on_user_info(server: ServerInterface, info: Info):
             prefix = info.content.split(' ')[2]
             save_prefix(server)
             server.reply(info, f'假人前缀已设置为 "{prefix}"')
+        elif info.content == '!!b clear':
+            clear_prefix(server)
+            server.reply(info, '假人前缀已清除')
         elif info.content == '!!b drop':
             drop_items(info)
         elif info.content == '!!b spawn':
@@ -58,6 +67,7 @@ def on_user_info(server: ServerInterface, info: Info):
 def on_load(server: ServerInterface, old_module):
     load_prefix(server)
     server.register_help_message('!!b set [prefix]', 'Set the prefix for bots')
+    server.register_help_message('!!b clear', 'Clear the prefix for bots')
     server.register_help_message('!!b drop', 'Drop items for players')
     server.register_help_message('!!b spawn', 'Spawn bots for players')
     server.register_help_message('!!b kill', 'Kill bots for players')
