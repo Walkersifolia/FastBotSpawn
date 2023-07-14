@@ -1,12 +1,12 @@
 {
     "id": "my_plugin",
     "version": "1.0.0",
-    "name": "My Plugin",
-    "description": "This description is a description to your plugin",
+    "name": "FastBotSpawn",
+    "description": "A plugin with multiple functions",
     "author": [
-        "You"
+        "WalkerTian"
     ],
-    "link": "https://github.com/MCDReforged/MCDReforged-PluginTemplate",
+    "link": "https://github.com/Walkersifolia/FastBotSpawn",
     "dependencies": {
     },
 
