@@ -1,6 +1,6 @@
 {
-    "id": "my_plugin",
-    "version": "1.0.0",
+    "id": "fbs_plugin",
+    "version": "1.1.0",
     "name": "FastBotSpawn",
     "description": "A plugin with multiple functions",
     "author": [
