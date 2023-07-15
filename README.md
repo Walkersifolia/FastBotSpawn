@@ -7,9 +7,10 @@
 
 ### 指令
 ```
-!!b set bot_ 设置前缀，bot_可随意替换
+!!b set bot_ 设置前缀，bot_可替换，推荐和Carpet配置同步，没有就留空
 !!b clear 清除设置的前缀
-!!b spawn 一次性召唤10个假人
-!!b drop 召唤出的假人丢出全部物品
-!!b kill 一次性下线10个假人
+!!b spawn [mini] [max] 批量召唤假人
+!!b drop [mini] [max] 批量控制丢出全部物品
+!!b kill [mini] [max] 批量下线假人
+[mini] [max] 是最小和最大的序号，差值不能超过10，不写默认为1-10
 ```
