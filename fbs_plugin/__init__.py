@@ -31,13 +31,6 @@ def clear_prefix(server: ServerInterface):
     save_prefix(server)
     server.logger.info('Prefix cleared')
 
-
-#@new_thread(PLUGIN_METADATA['name'])
-#def spawn_bots(source: CommandSource):
-#    player = source.player
-#    for i in range(1, 11):
-#        source.get_server().execute(f'/execute at {player} run player {prefix}{i} spawn in survival')
-
 @new_thread(PLUGIN_METADATA['name'])
 def spawn_bots(source: CommandSource, start: int, end: int):
     player = source.player
@@ -73,8 +66,6 @@ def on_user_info(server: ServerInterface, info: Info):
         elif info.content == '!!b clear':
             clear_prefix(server)
             server.reply(info, '假人前缀已清除')
-#        elif info.content == '!!b spawn':
-#            spawn_bots(info)
         elif info.content.startswith('!!b spawn'):
             args = info.content.strip().split(' ')[1:]
             if len(args) == 1:
@@ -86,8 +77,6 @@ def on_user_info(server: ServerInterface, info: Info):
                     server.reply(info, '§c一次指令召唤数量不能大于10个，请分批执行')
                 else:
                     spawn_bots(info, start, end)
-#        elif info.content == '!!b drop':
-#            drop_items(info)
         elif info.content.startswith('!!b drop'):
             args = info.content.strip().split(' ')[1:]
             if len(args) == 1:
@@ -96,8 +85,6 @@ def on_user_info(server: ServerInterface, info: Info):
                 start = int(args[1])
                 end = int(args[2])
                 drop_items(info, start, end)
-#        elif info.content == '!!b kill':
-#            kill_bots(info)
         elif info.content.startswith('!!b kill'):
             args = info.content.strip().split(' ')[1:]
             if len(args) == 1:
