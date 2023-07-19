@@ -14,3 +14,6 @@
 !!b kill [mini] [max] 批量下线假人
 [mini] [max] 是最小和最大的序号，差值不能超过10，不写默认为1-10
 ```
+
+### 示例
+![J~FLC44}_MTO}9IYQ9W~SJ4](https://github.com/Walkersifolia/FastBotSpawn/assets/129571444/009e4ef4-5e19-4fc6-b610-7e05ef03a6b9)
