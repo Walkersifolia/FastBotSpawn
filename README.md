@@ -17,4 +17,5 @@
 ```
 
 ### 示例
-![J~FLC44}_MTO}9IYQ9W~SJ4](https://github.com/Walkersifolia/FastBotSpawn/assets/129571444/009e4ef4-5e19-4fc6-b610-7e05ef03a6b9)
+![GA)Y0LERWPY@BVKVE{V`JOS](https://github.com/Walkersifolia/FastBotSpawn/assets/129571444/b0daa1f5-a441-4cdc-baf0-6395441c83a8)
+
