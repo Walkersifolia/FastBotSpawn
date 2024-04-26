@@ -4,7 +4,7 @@ import json
 
 PLUGIN_METADATA = {
     'id': 'bot',
-    'version': '1.1.1',
+    'version': '1.1.2',
     'name': 'FastBotSpawn',
     'description': 'A plugin with multiple functions',
     'author': 'WalkerTian',
