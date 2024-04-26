@@ -52,7 +52,7 @@ def kill_bots(source: CommandSource, start: int, end: int):
 def show_help_message(server: ServerInterface, info: Info):
     server.reply(info, '\n----------欢迎使用FastBotSpawn插件----------\n')
     server.reply(info, '§6!!b set bot_§r 设置前缀，§6bot_§r可替换，推荐和Carpet配置同步，没有就留空')
-    server.reply(info, '§6!!b set limit [number]§r 设置最大生成数量，默认为10')
+    server.reply(info, '§6!!b limit [number]§r 设置最大生成数量，默认为10')
     server.reply(info, '§6!!b clear§r 清除设置的前缀')
     server.reply(info, '§6!!b spawn [mini] [max]§r 批量召唤假人')
     server.reply(info, '§6!!b drop [mini] [max]§r 批量控制假人丢出全部物品')
