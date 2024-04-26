@@ -16,6 +16,3 @@
 [mini] [max] 是最小和最大的序号，差值不能超过10，不写默认为1-10
 ```
 
-### 示例
-![GA)Y0LERWPY@BVKVE{V`JOS](https://github.com/Walkersifolia/FastBotSpawn/assets/129571444/b0daa1f5-a441-4cdc-baf0-6395441c83a8)
-
